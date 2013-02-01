@@ -21,7 +21,7 @@ $default-animation-fill-mode: none;
   $name-7: false,
   $name-8: false,
   $name-9: false,
-  $name-10: false
+  $name-10: false 
 ) {
   $name: compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9, $name-10);
   @include experimental(animation-name, $name);
