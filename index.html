@@ -1,16 +1,105 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Index</title>
-	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script src="js/common.js"></script>  
 </head>
 <body>
 <div class="l-layout">
-    <header class="header"></header>
+    <header class="header">
+        <!-- Header nav -->
+        <nav class="header__nav">
+            <a href="#">Что посмотреть</a>
+            <a href="#" class="active">Фильмотека</a>
+        </nav>
+        <!-- END Header nav -->
+        <div class="header__main">
+            <!-- Header search -->
+            <div class="header__search">
+                <form>
+                    <input type="text" placeholder="Поиск фильмов">
+                    <input type="submit">
+                </form>
+            </div>
+            <!-- END Header search -->
+            <!-- Header notification -->
+            <span class="header__notific">8</span>
+            <!-- Header otification -->
+            <!-- Header  downloads -->
+            <div class="header__download">
+                <span class="counter">8</span>
+                <div class="download-list">
+                    <div class="download-list__title">
+                        <span>Загружается сейчас</span>
+                        <span class="pause"><i class="icon icon_pause"></i></span>
+                    </div>
+                    <div class="progress progress_cancel">
+                       Вы удалили фильм
+                       <span>Отменить</span>
+                    </div>
+                    <div class="progress">
+                       <div class="progress__video"><a href="#">Крестный отец</a></div> 
+                        <div class="meter animate">
+                            <span style="width: 42%"><span></span></span>
+                        </div>
+                        <span class="progress__percent">42%</span>
+                        <i class="icon icon_pause"></i>
+                        <i class="icon icon_del"></i>
+                    </div>
+                    <div class="progress progress_pause">
+                       <div class="progress__video"><a href="#">Крестный отец</a></div> 
+                        <div class="meter animate">
+                            <span style="width: 42%"><span></span></span>
+                        </div>
+                        <span class="progress__percent">42%</span>
+                        <i class="icon icon_play"></i>
+                        <i class="icon icon_del"></i>
+                    </div>
+                    <div class="progress progress_done">
+                       <div class="progress__video"><a href="#">Крестный отец</a></div> 
+                        <span>Загрузка завершена</span>
+                        <a href="#" class="btn-watch">Смотреть</a>
+                    </div>
+                    <div class="download-list__all">
+                        <a href="#">Все загрузки</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Header downloads -->
+            <!-- Header user -->
+            <div href="#" class="header__user">
+               <a href="#"><img  src="http://placesheen.com/35/35" alt=""></a>
+               <a href="#" class="set"></a>
+            </div>
+            <!-- Header user -->
+        </div>
+    </header>
+    <aside class="sidebar">
+        
+    </aside>
+    <section class="main">
+        <div class="nav-wrap">
+            <nav class="nav">
+                <a href="#" class="active">Обзор</a>
+                <a href="#">Загруженное</a>
+                <a href="#">Избранное</a>
+                <a href="#">Подписки</a>
+                <a href="#">Просмотренное</a>
+                <a href="#">Не интересное</a>
+            </nav>
+            <div class="disk-space">
+                <div>
+                    <span>Место на диске:</span>
+                    Занято: 12 Гб, свободно: 16 Гб.
+                </div>
+                <button>Освободить</button>
+            </div>
+        </div>
+    </section>
     <div class="push"></div>
 </div>
 <footer class="footer"></footer>

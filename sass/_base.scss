@@ -77,7 +77,7 @@ $break-large: 1180px;
 }
 
 // image replacement extend
-%hide-text{
+%hide-text {
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
@@ -161,4 +161,14 @@ $break-large: 1180px;
     font-weight: normal;
     font-style: normal;
     font-family: 'pt_sansbold_italic', sans-serif;
+}
+@mixin mp_r {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Myriad Pro', sans-serif;
+}
+@mixin din_b {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'DINPro-Bold', sans-serif;
 }
