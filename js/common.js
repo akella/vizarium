@@ -22,5 +22,62 @@ $(document).ready(function() {
         }
     });
 
+    $(".btn-drop-list").click(function(){
+        if ($(this).hasClass("btn-drop-list_active")) {
+            $(this).removeClass("btn-drop-list_active");
+            $(this).next().slideUp("fast");
+            $(".series-scroll").removeClass("active");
+        }
+        else {
+            $(this).addClass("btn-drop-list_active");
+            $(this).next().slideDown("fast");
+            $(".series-scroll").addClass("active");
+        }
+    });
+
+    $(".icon_next, .icon_prev").click(function(){
+        $(".series-scroll").removeClass("active");
+         $(".btn-drop-list").removeClass("btn-drop-list_active");
+    });
+
+    $(".i-dont-watch").click(function(){
+        $(this).parent().hide();
+        $(this).parent().next().slideUp("fast");
+    });
+
+    $('.series-scroll').cycle({ 
+        fx:      'scrollLeft',
+        next:   '.icon_next', 
+        prev:   '.icon_prev', 
+        timeout:  0,
+        speed: 700
+    });
+
+    // select film options
+    $(".select__wrap").click(function(){
+        if ($(this).hasClass("js-active")) {
+            $(this).removeClass("js-active");
+            $(this).next().slideUp("fast");
+        }
+        else {
+            $(".select__wrap").removeClass("js-active");
+            $(this).addClass("js-active");
+            $(".select ul").slideUp("fast");
+            $(this).next().slideDown("fast");
+        }
+    });
+
+    $(".select li").click(function(){
+        var val = $(this).html();
+        $(this).parent().prev().children("span").html(val);
+        $(this).parent().slideUp("fast");
+        $(this).parent().prev().removeClass("js-active");
+    });
+
+    // watch status buttons
+    $(".watch-status button").click(function(){
+        $(".watch-status button").removeClass("active");
+        $(this).addClass("active");
+    });
 
 });
