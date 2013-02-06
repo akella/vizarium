@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <title>Index</title>
     <link rel="stylesheet" media="screen" href="css/screen.css" >
+    <link rel="stylesheet" media="screen" href="css/jquery-ui.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script src="js/jquery.cycle.all.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.masonry.js"></script>
     <script src="js/common.js"></script>  
 </head>
 <body>
@@ -81,6 +84,163 @@
     </header>
     <section class="section">
         <aside class="sidebar">
+            <h2 class="sidebar__title">Показывать в обзоре</h2>
+            <div class="check">
+                <label for="check1">
+                    <input type="checkbox" id="check1" name="name">
+                    <i></i>
+                    Новые серии
+                </label>
+            </div>
+            <div class="check">
+                <label for="check2">
+                    <input type="checkbox" id="check2" name="name">
+                    <i></i>
+                    Новые серии
+                </label>
+            </div>
+            <div class="check">
+                <label for="check3">
+                    <input type="checkbox" id="check3" name="name">
+                    <i></i>
+                    Новые серии
+                </label>
+            </div>
+            <button class="btn-clr">Очистить фильтр</button>
+            <div class="check">
+                <label for="check4">
+                    <input type="checkbox" id="check4" name="name">
+                    <i></i>
+                    Фильмы
+                </label>
+            </div>
+            <div class="check">
+                <label for="check5">
+                    <input type="checkbox" id="check5" name="name">
+                    <i></i>
+                    Сериалы
+                </label>
+            </div>
+            <div class="check">
+                <label for="check6">
+                    <input type="checkbox" id="check6" name="name">
+                    <i></i>
+                    Передачи
+                </label>
+            </div>
+            <div class="filter filter_genre">
+                <div class="filter-genre">
+                    <h3 class="filter__title">Жанр</h3>
+                    <ul>
+                        <li class="active">
+                            <span>Боевик</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li>
+                            <span>Драма</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li>
+                            <span>Комедия</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li>
+                            <span>Мелодрама</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li class="inactive">
+                            <span>Мультфильм</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li>
+                            <span>Триллер</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li>
+                            <span>Ужасы</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                        <li>
+                            <span>Фантастика</span>
+                            <i class="icon icon_plus"></i>
+                            <i class="icon icon_minus"></i>
+                        </li>
+                    </ul>
+                </div>
+                <span class="more-genres">Больше жанров</span>
+            </div>
+            <div class="filter">
+                <h3 class="filter__title">Средняя оценка</h3>
+                <div class="slider-range js-range-1">
+                    <strong>IMDB</strong>
+                    <div></div>
+                    <span></span>
+                </div>
+                <div class="slider-range js-range-2">
+                    <strong>Кинопоиск</strong>
+                    <div></div>
+                    <span></span>
+                </div>
+            </div>
+            <div class="filter">
+                <h3 class="filter__title">Год выхода</h3>
+                <div class="filter__diapazon">
+                    <span class="filter__sub-title">Диапазон</span>
+                    <div class="select-diapazon select">
+                        <span class="select__wrap"><span>После 2005</span></span>
+                        <ul>
+                            <li>После 2006</li>
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter__period">
+                    <span class="filter__sub-title">Указать период</span>
+                    <input type="text">
+                    <span class="divider">—</span>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="select-opt select">
+                 <span class="select__wrap"><span>Страна</span></span>
+                 <ul>
+                     <li>Украина</li>
+                     <li>very long name of the country</li>
+                     <li>...</li>
+                     <li>...</li>
+                     <li>...</li>
+                 </ul>
+             </div>
+             <div class="select-opt select">
+                 <span class="select__wrap"><span>Качество видео</span></span>
+                 <ul>
+                     <li>1080p</li>
+                     <li>...</li>
+                     <li>...</li>
+                     <li>...</li>
+                     <li>...</li>
+                 </ul>
+             </div>
+             <div class="select-opt select">
+                 <span class="select__wrap"><span>Язык</span></span>
+                 <ul>
+                     <li>English</li>
+                     <li>...</li>
+                     <li>...</li>
+                     <li>...</li>
+                     <li>...</li>
+                 </ul>
+             </div>
         </aside>
         <section class="main">
             <div class="nav-wrap">
@@ -100,97 +260,378 @@
                     <button>Освободить</button>
                 </div>
             </div>
-            <div class="film">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
-                <div class="film__watch">
-                    <button class="btn">Смотреть</button>
-                    <div class="drop-list-wrap">
-                        <button class="btn-drop-list"></button>
-                        <ul class="film-drop-list">
-                            <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
-                            <li><i class="icon icon_file"></i>Открыть в проводнике</li>
-                            <li><i class="icon icon_trash"></i>Удалить</li>
-                        </ul>
-                    </div>
-                    <div class="progress">
-                       <span class="progress__percent">52%</span>
-                        <div class="meter animate">
-                            <span style="width: 52%"><span></span></span>
+            <div class="film-wrap js-masonry">
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
                         </div>
-                        <i class="icon icon_pause-2"></i>
-                        <i class="icon icon_del"></i>
+                        <div class="progress">
+                           <span class="progress__percent">52%</span>
+                            <div class="meter animate">
+                                <span style="width: 52%"><span></span></span>
+                            </div>
+                            <i class="icon icon_pause-2"></i>
+                            <i class="icon icon_del"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="film">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
-                <div class="film__watch">
-                    <button class="btn">Смотреть</button>
-                    <div class="drop-list-wrap">
-                        <button class="btn-drop-list"></button>
-                        <ul class="film-drop-list">
-                            <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
-                            <li><i class="icon icon_file"></i>Открыть в проводнике</li>
-                            <li><i class="icon icon_trash"></i>Удалить</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="film">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
-                <div class="film__watch">
-                    <div class="series-scroll">
-                        <div class="series-scroll__item">
-                            <span class="series-title">1х12. Как я провел лето</span>
-                            <button class="btn">Смотреть</button>
-                            <div class="drop-list-wrap">
-                                <button class="btn-drop-list"></button>
-                                <ul class="film-drop-list">
-                                    <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
-                                    <li><i class="icon icon_file"></i>Открыть в проводнике</li>
-                                    <li><i class="icon icon_trash"></i>Удалить</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="series-scroll__item">
-                            <span class="series-title">2х12. Как я провел лето</span>
-                            <button class="btn">Смотреть</button>
-                            <div class="drop-list-wrap">
-                                <button class="btn-drop-list"></button>
-                                <ul class="film-drop-list">
-                                    <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
-                                    <li><i class="icon icon_file"></i>Открыть в проводнике</li>
-                                    <li><i class="icon icon_trash"></i>Удалить</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="series-scroll__item">
-                            <span class="series-title">3х12. Как я провел лето</span>
-                            <button class="btn">Смотреть</button>
-                            <div class="drop-list-wrap">
-                                <button class="btn-drop-list"></button>
-                                <ul class="film-drop-list">
-                                    <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
-                                    <li><i class="icon icon_file"></i>Открыть в проводнике</li>
-                                    <li><i class="icon icon_trash"></i>Удалить</li>
-                                </ul>
-                            </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
                         </div>
                     </div>
-                    <i class="icon icon_prev"></i>
-                    <i class="icon icon_next"></i>
                 </div>
-                <div class="film__more">
-                    <button class="btn-more">Еще 13 серий</button>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <div class="series-scroll">
+                            <div class="series-scroll__item">
+                                <span class="series-title">1х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">2х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">3х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon icon_prev"></i>
+                        <i class="icon icon_next"></i>
+                    </div>
+                    <div class="film__more">
+                        <button class="btn-more">Еще 13 серий</button>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
+                        </div>
+                        <div class="progress">
+                           <span class="progress__percent">52%</span>
+                            <div class="meter animate">
+                                <span style="width: 52%"><span></span></span>
+                            </div>
+                            <i class="icon icon_pause-2"></i>
+                            <i class="icon icon_del"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <div class="series-scroll">
+                            <div class="series-scroll__item">
+                                <span class="series-title">1х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">2х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">3х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon icon_prev"></i>
+                        <i class="icon icon_next"></i>
+                    </div>
+                    <div class="film__more">
+                        <button class="btn-more">Еще 13 серий</button>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
+                        </div>
+                        <div class="progress">
+                           <span class="progress__percent">52%</span>
+                            <div class="meter animate">
+                                <span style="width: 52%"><span></span></span>
+                            </div>
+                            <i class="icon icon_pause-2"></i>
+                            <i class="icon icon_del"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <div class="series-scroll">
+                            <div class="series-scroll__item">
+                                <span class="series-title">1х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">2х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">3х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon icon_prev"></i>
+                        <i class="icon icon_next"></i>
+                    </div>
+                    <div class="film__more">
+                        <button class="btn-more">Еще 13 серий</button>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
+                        </div>
+                        <div class="progress">
+                           <span class="progress__percent">52%</span>
+                            <div class="meter animate">
+                                <span style="width: 52%"><span></span></span>
+                            </div>
+                            <i class="icon icon_pause-2"></i>
+                            <i class="icon icon_del"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <button class="btn">Смотреть</button>
+                        <div class="drop-list-wrap">
+                            <button class="btn-drop-list"></button>
+                            <ul class="film-drop-list">
+                                <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                <li><i class="icon icon_trash"></i>Удалить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="film">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title"><a href="#">Пираты Карибского Моря</a></h2>
+                    <div class="film__watch">
+                        <div class="series-scroll">
+                            <div class="series-scroll__item">
+                                <span class="series-title">1х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">2х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="series-scroll__item">
+                                <span class="series-title">3х12. Как я провел лето</span>
+                                <button class="btn">Смотреть</button>
+                                <div class="drop-list-wrap">
+                                    <button class="btn-drop-list"></button>
+                                    <ul class="film-drop-list">
+                                        <li><i class="icon icon_eye-s"></i>Отметить просмотренным</li>
+                                        <li><i class="icon icon_file"></i>Открыть в проводнике</li>
+                                        <li><i class="icon icon_trash"></i>Удалить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon icon_prev"></i>
+                        <i class="icon icon_next"></i>
+                    </div>
+                    <div class="film__more">
+                        <button class="btn-more">Еще 13 серий</button>
+                    </div>
                 </div>
             </div>
             <div class="text-block">
@@ -223,199 +664,821 @@
                     <a href="#">Топ Кинопоиска</a>
                 </nav>
             </div>
-            <div class="film film_new">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title">
-                    <a href="#">Пираты Карибского Моря</a>
-                    <span>Боевик,  1999 г.,  2ч 16 мин., <b>экранка</b></span>
-                </h2>
-                <ul class="film__rate">
-                    <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
-                    <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
-                </ul>
-                <div class="film__pop-rate">
-                    <span>7 место по популярности</span>
-                </div>
-                <div class="film__edit">
-                    <i class="icon icon_star-act"></i>
-                    <i class="icon icon_eye"></i>
-                    <i class="icon icon_delite-act"></i>
-                </div>
-                <div class="film__opt">
-                    <span class="film__opt-title">Смотреть фильм</span>
-                    <div class="select">
-                        <span class="select__wrap">Источник:<span>vk.com</span></span>
-                        <ul>
-                            <li>vk.com</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                        </ul>
+            <div class="film-wrap js-masonry">
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин., <b>экранка</b></span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__pop-rate">
+                        <span>7 место по популярности</span>
                     </div>
-                    <div class="select">
-                        <span class="select__wrap">Язык:<span>Русский</span></span>
-                        <ul>
-                            <li>Русский</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                        </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star-act"></i>
+                        <i class="icon icon_eye"></i>
+                        <i class="icon icon_delite-act"></i>
                     </div>
-                    <div class="select">
-                        <span class="select__wrap">Качество:
-                            <span>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
+                    <div class="film__opt">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
                             </span>
-                        </span>
-                        <ul>
-                            <li>
-                                <i class="icon icon_star-s"></i>
-                            </li>
-                            <li>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                            </li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                        </ul>
-                    </div>
-                    <span class="film__size">Размер:  1,6 Гб</span>
-                    <button class="btn-watch">Смотреть онлайн</button>
-                    <button class="btn">Загрузить в фильмотеку</button>
-                </div>
-            </div>
-            <div class="film film_new">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title">
-                    <a href="#">Джон Картер</a>
-                    <span>Боевик,  1999 г.,  2ч 16 мин.</span>
-                </h2>
-                <ul class="film__rate">
-                    <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
-                    <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
-                </ul>
-                <div class="film__edit">
-                    <i class="icon icon_star"></i>
-                    <i class="icon icon_eye-act"></i>
-                    <i class="icon icon_delite"></i>
-                    <div class="mark">
-                        <span>Оценка:</span>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <span class="film__size">Размер:  1,6 Гб</span>
+                        <button class="btn-watch">Смотреть онлайн</button>
+                        <button class="btn">Загрузить в фильмотеку</button>
                     </div>
                 </div>
-            </div>
-            <div class="film film_new">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title">
-                    <a href="#">Джон Картер</a>
-                    <span><strong>Сериал,</strong>  Боевик,  1999 г.</span>
-                </h2>
-                <ul class="film__rate">
-                    <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
-                    <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
-                </ul>
-                <div class="film__edit">
-                    <i class="icon icon_star"></i>
-                    <i class="icon icon_eye-act"></i>
-                    <i class="icon icon_delite"></i>
-                    <div class="watch-status">
-                        <button class="active">Смотрю сейчас</button>
-                        <button>Уже посмотрел</button>
-                    </div>
-                    <div class="mark">
-                        <span>Оценка:</span>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark-act"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
-                        <i class="icon icon_mark"></i>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="film film_new">
-                <a href="#" class="film__img">
-                    <img src="http://placehold.it/190x269" alt="">
-                </a>
-                <h2 class="film__title">
-                    <a href="#">Пираты Карибского Моря</a>
-                </h2>
-                <div class="film__opt film__opt_mod">
-                    <span class="film__opt-title">Смотреть фильм</span>
-                    <div class="select">
-                        <span class="select__wrap">Источник:<span>vk.com</span></span>
-                        <ul>
-                            <li>vk.com</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                        </ul>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span><strong>Сериал,</strong>  Боевик,  1999 г.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="watch-status">
+                            <button class="active">Смотрю сейчас</button>
+                            <button>Уже посмотрел</button>
+                        </div>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
                     </div>
-                    <div class="select">
-                        <span class="select__wrap">Язык:<span>Русский</span></span>
-                        <ul>
-                            <li>Русский</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                        </ul>
-                    </div>
-                    <div class="select">
-                        <span class="select__wrap">Качество:
-                            <span>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                    </h2>
+                    <div class="film__opt film__opt_mod">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
                             </span>
-                        </span>
-                        <ul>
-                            <li>
-                                <i class="icon icon_star-s"></i>
-                            </li>
-                            <li>
-                                <i class="icon icon_star-s"></i>
-                                <i class="icon icon_star-s"></i>
-                            </li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                        </ul>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="no-more">
+                            <span>Больше не смотрю сериал</span>
+                        </div>
                     </div>
-                    <div class="no-more">
-                        <span>Больше не смотрю сериал</span>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин., <b>экранка</b></span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__pop-rate">
+                        <span>7 место по популярности</span>
+                    </div>
+                    <div class="film__edit">
+                        <i class="icon icon_star-act"></i>
+                        <i class="icon icon_eye"></i>
+                        <i class="icon icon_delite-act"></i>
+                    </div>
+                    <div class="film__opt">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <span class="film__size">Размер:  1,6 Гб</span>
+                        <button class="btn-watch">Смотреть онлайн</button>
+                        <button class="btn">Загрузить в фильмотеку</button>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span><strong>Сериал,</strong>  Боевик,  1999 г.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="watch-status">
+                            <button class="active">Смотрю сейчас</button>
+                            <button>Уже посмотрел</button>
+                        </div>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                    </h2>
+                    <div class="film__opt film__opt_mod">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="no-more">
+                            <span>Больше не смотрю сериал</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин., <b>экранка</b></span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__pop-rate">
+                        <span>7 место по популярности</span>
+                    </div>
+                    <div class="film__edit">
+                        <i class="icon icon_star-act"></i>
+                        <i class="icon icon_eye"></i>
+                        <i class="icon icon_delite-act"></i>
+                    </div>
+                    <div class="film__opt">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <span class="film__size">Размер:  1,6 Гб</span>
+                        <button class="btn-watch">Смотреть онлайн</button>
+                        <button class="btn">Загрузить в фильмотеку</button>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span><strong>Сериал,</strong>  Боевик,  1999 г.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="watch-status">
+                            <button class="active">Смотрю сейчас</button>
+                            <button>Уже посмотрел</button>
+                        </div>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                    </h2>
+                    <div class="film__opt film__opt_mod">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="no-more">
+                            <span>Больше не смотрю сериал</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин., <b>экранка</b></span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__pop-rate">
+                        <span>7 место по популярности</span>
+                    </div>
+                    <div class="film__edit">
+                        <i class="icon icon_star-act"></i>
+                        <i class="icon icon_eye"></i>
+                        <i class="icon icon_delite-act"></i>
+                    </div>
+                    <div class="film__opt">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <span class="film__size">Размер:  1,6 Гб</span>
+                        <button class="btn-watch">Смотреть онлайн</button>
+                        <button class="btn">Загрузить в фильмотеку</button>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Джон Картер</a>
+                        <span><strong>Сериал,</strong>  Боевик,  1999 г.</span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__edit">
+                        <i class="icon icon_star"></i>
+                        <i class="icon icon_eye-act"></i>
+                        <i class="icon icon_delite"></i>
+                        <div class="watch-status">
+                            <button class="active">Смотрю сейчас</button>
+                            <button>Уже посмотрел</button>
+                        </div>
+                        <div class="mark">
+                            <span>Оценка:</span>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark-act"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                            <i class="icon icon_mark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                    </h2>
+                    <div class="film__opt film__opt_mod">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="no-more">
+                            <span>Больше не смотрю сериал</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="film film_new">
+                    <a href="#" class="film__img">
+                        <img src="http://placehold.it/190x269" alt="">
+                    </a>
+                    <h2 class="film__title">
+                        <a href="#">Пираты Карибского Моря</a>
+                        <span>Боевик,  1999 г.,  2ч 16 мин., <b>экранка</b></span>
+                    </h2>
+                    <ul class="film__rate">
+                        <li><i class="icon icon_kinopoisk"></i><b>8.0</b>, 23 место в общем топе</li>
+                        <li><i class="icon icon_imdb"></i><b>7.49</b>, 2 место в топе боевиков</li>
+                    </ul>
+                    <div class="film__pop-rate">
+                        <span>7 место по популярности</span>
+                    </div>
+                    <div class="film__edit">
+                        <i class="icon icon_star-act"></i>
+                        <i class="icon icon_eye"></i>
+                        <i class="icon icon_delite-act"></i>
+                    </div>
+                    <div class="film__opt">
+                        <span class="film__opt-title">Смотреть фильм</span>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Источник:<span>vk.com</span></span>
+                            <ul>
+                                <li>vk.com</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Язык:<span>Русский</span></span>
+                            <ul>
+                                <li>Русский</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <div class="select-film-opt select">
+                            <span class="select__wrap">Качество:
+                                <span>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>
+                                    <i class="icon icon_star-s"></i>
+                                    <i class="icon icon_star-s"></i>
+                                </li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                        <span class="film__size">Размер:  1,6 Гб</span>
+                        <button class="btn-watch">Смотреть онлайн</button>
+                        <button class="btn">Загрузить в фильмотеку</button>
                     </div>
                 </div>
             </div>
+            <div class="load-message">Загржуаю фильмы. Подождите, пожалуйста.</div>
+            <div class="notific-message">Вы удалили фильм «Пираты Карибского Моря»<i class="icon icon_del-2"></i></div>
         </section>
     </section>
 </div>

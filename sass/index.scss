@@ -121,9 +121,13 @@
 }
 
 // items
+.film-wrap {
+    @extend %clr;
+}
 .film {
-    display: inline-block;
-    margin: 0 15px 18px 0;
+    float: left;
+    z-index: 2;
+    margin: 0 18px 18px 0;
     padding: 11px 2px 16px;
     width: 214px;
     background: #fff;
@@ -155,6 +159,10 @@
 .film__img {
     display: block;
     text-align: center;
+    img {
+        width: 190px;
+        height: 269px;
+    }
 }
 .film__title {
     padding: 3px 8px;
@@ -206,7 +214,7 @@
     }
 }
 
-.film__rate {
+.film__rate { 
     margin: 3px 0 10px;
     padding: 8px 6px 4px;
     font-size: 11px;
@@ -367,6 +375,7 @@
     margin: 55px 0 31px;
     padding: 6px 20px 20px;
     background: #fff;
+    clear: both;
     @include border-radius(5px);
     h2 {
         position: relative;
@@ -467,58 +476,41 @@
     font-size: 15px;  
     text-align: center;
 }
-.select {
-    position: relative;
+.select-film-opt {
     margin-bottom: 6px;
     ul {
-        display: none;
-        position: absolute;
-        z-index: 1000;
         top: 24px;
-        left: 0;
-        padding: 3px 10px 5px;
         width: 190px;
-        background: #fff;
         @include border-radius(3px);
         border: 1px solid #dcdcdc;
         @include box-sizing(border-box);
     }
-    li {
-        cursor: pointer;
-        &:hover {
-            color: #0ba5dc;
+    .select__wrap { 
+        padding: 0 10px;
+        height: 25px;
+        width: 190px;
+        line-height: 25px;
+        border: 1px solid #dcdcdc;
+        color: #546166;
+        @include pts_b;
+        font-size: 11px;
+        @include border-radius(3px);
+        @include background-image(linear-gradient(#fefefe, #e6e6e6));
+        &:after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            @include sized-sprite($icons, arr4);
+        }
+        span {
+            display: inline-block;
+            margin-left: 5px;
+            @include pts_r;
         }
     }
 }
-.select__wrap { 
-    position: relative;
-    display: block;
-    padding: 0 10px;
-    height: 25px;
-    width: 190px;
-    line-height: 25px;
-    border: 1px solid #dcdcdc;
-    color: #546166;
-    cursor: pointer;
-    @include pts_b;
-    font-size: 11px;
-    @include border-radius(3px);
-    @include box-sizing(border-box);
-    @include user-select(none); 
-    @include background-image(linear-gradient(#fefefe, #e6e6e6));
-    &:after {
-        content: "";
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        @include sized-sprite($icons, arr4);
-    }
-    span {
-        display: inline-block;
-        margin-left: 5px;
-        @include pts_r;
-    }
-}
+
 .film__size {
     display: block;
     margin: 0 auto 13px;
@@ -586,3 +578,4 @@
         border-bottom: 1px dotted;
     }
 }
+

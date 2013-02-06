@@ -8,6 +8,46 @@ $(document).ready(function() {
     //         .animate({
     //             width: $(this).data("origWidth")
     //         }, 1200);
+    
+    // masonry
+    $('.js-masonry').masonry({
+        itemSelector : '.film',
+        isAnimated: true,
+        isResizable: true,
+        animationOptions: {
+            duration: 300,
+            easing: 'linear',
+            queue: false
+        }
+    });
+
+    // filter imdb
+    $( ".js-range-1 div" ).slider({
+      range: "min",
+      value: 8.5,
+      min: 1,
+      max: 10,
+      step: 0.1,
+      animate: "slow",
+      slide: function( event, ui ) {
+        $( ".js-range-1 span" ).text(ui.value );
+      }
+    });
+    $( ".js-range-1 span" ).text($( ".js-range-1 div" ).slider( "value" ) );
+
+    // filter kinopoisk
+    $( ".js-range-2 div" ).slider({
+      range: "min",
+      value: 8.5,
+      min: 1,
+      max: 10,
+      step: 0.1,
+      animate: "slow",
+      slide: function( event, ui ) {
+        $( ".js-range-2 span" ).text(ui.value );
+      }
+    });
+    $( ".js-range-2 span" ).text($( ".js-range-2 div" ).slider( "value" ) );
 
     $(".header__download .counter").click(function(){
         if ($(this).hasClass("js-active")) {

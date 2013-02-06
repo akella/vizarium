@@ -109,17 +109,16 @@ a {
     @extend %clr;
     background: #e1e1e1;
 }
-.sidebar {
-    float: left;
-    width: 150px;
-    height: 500px;
-}
+
 .main {
     padding: 0 16px 0 11px;
     overflow: hidden;
     background: #ececec;
 }
 
+/* ----------------------------------- //END Main styles -------------------------------------- */
+
+/* ------------------------------------------ Header ----------------------------------------- */
 .header {
     @extend %clr;
     background: #000;
@@ -402,9 +401,10 @@ a {
         text-decoration: none;
     } 
 }
-/* ------------------------------------ //END Main styles -------------------------------------- */
+/* ------------------------------------------ Header ----------------------------------------- */
 
-/* ------------------------------------ //END Blocks -------------------------------------- */
+
+/* ---------------------------------------- Blocks ----------------------------------------- */
 .icon {
     display: inline-block;
     @include user-select(none);
@@ -432,6 +432,10 @@ a {
 .icon_delite {@include sized-sprite($icons,delite);}
 .icon_delite-act {@include sized-sprite($icons,delite-act);}
 
+.icon_plus {@include sized-sprite($icons, plus);}
+.icon_minus {@include sized-sprite($icons, minus);}
+
+
 // buttons
 
 .btn { 
@@ -455,6 +459,66 @@ a {
     }
 }
 
+.select {
+    position: relative;
+    ul {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        padding: 7px 10px 5px;
+        width: 100%;
+        background: #fff;
+        @include border-radius(3px);
+        border: 1px solid #dcdcdc;
+        @include box-sizing(border-box);
+    }
+    li {
+        cursor: pointer;
+        line-height: 1;
+        margin-bottom: 10px;
+        &:hover {
+            color: #0ba5dc;
+        }
+    }
+}
+.select__wrap { 
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @include box-sizing(border-box);
+    @include user-select(none); 
+    @include border-radius(2px);
+}
 
-/* --------------------------------------- Blocks ---------------------------------------- */
+.load-message {
+    margin: 67px auto 0;
+    width: 655px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    text-align: center;
+    background: #f6f6f6;
+    @include border-radius(5px);
+}
+
+.notific-message {
+    display: none;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 16px;
+    background: #fadccb;
+    border-bottom: 1px solid #d3a68c;
+    .icon {
+        float: right;
+        margin: 19px 16px 0 0;
+        cursor: pointer;
+    }
+}
+/* --------------------------------------- END Blocks ---------------------------------------- */
  
