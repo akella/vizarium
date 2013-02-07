@@ -2,7 +2,7 @@
 
 .filter-wrap { position: absolute; left: 20px; background: #e1e1e1; }
 
-.filter-wrap_act { position: fixed; top: 62px !important; }
+.filter-wrap_act { position: fixed; top: 60px !important; }
 
 .sidebar__title { margin-bottom: 5px; color: #515151; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 13px; }
 

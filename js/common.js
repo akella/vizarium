@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('#js-nav-1').addClass('nav-wrap_act');
     $('.js-films-1').addClass('film-wrap_act');
     $(".js-filter-1").addClass('filter-wrap_act');
-
+    $('<div class="shadow"></div>').insertAfter('.nav');
 
     // window scroll
     $(window).scroll(function() {
@@ -33,6 +33,17 @@ $(document).ready(function() {
             $(".js-filter-1").removeClass('filter-wrap_act');
         }
 
+        if (($('body').scrollTop() > 10)) {
+            $('#js-nav-1 .shadow').animate({
+                opacity: 1,
+              }, 500 );
+        }
+        else {
+            $('#js-nav-1 .shadow').animate({
+                opacity: 0,
+              }, 500 );
+        }
+
         // activate #js-nav-2
         if ($('body').scrollTop() >= (position_nav_2 - 48)) {
             $('#js-nav-2').addClass('nav-wrap_act');
@@ -40,12 +51,19 @@ $(document).ready(function() {
             $(".js-btn-2").addClass("active");
             $('.js-films-2').addClass('film-wrap_act');
             $(".js-filter-2").addClass('filter-wrap_act');
+            $('#js-nav-2 .shadow').animate({
+                opacity: 1,
+              }, 500 );
         }
         else {
             $('#js-nav-2').removeClass('nav-wrap_act');
             $('.js-films-2').removeClass('film-wrap_act');
             $(".js-filter-2").removeClass('filter-wrap_act');
+            // $('#js-nav-2 .shadow').animate({
+            //     opacity: 0,
+            //   }, 500 );
         }
+
         if ($('body').scrollTop() < 100) {
             $(".js-btn-1").addClass("active");
             $(".js-btn-2").removeClass("active");
@@ -55,10 +73,7 @@ $(document).ready(function() {
     // get nav position
     var position_nav_1 = $("#js-nav-1").position().top;
     var position_nav_2 = $("#js-nav-2").position().top;
-    var pos_f_1 = $(".js-filter-1").position().top;
-    pos_f_1 = position_nav_1;
-    var pos_f_2 = $(".js-filter-2").position().top;
-    pos_f_2 = position_nav_2 + 14;
+    var pos_f_2 = position_nav_2 + 14;
     $(".js-filter-2").css("top", pos_f_2);
 
     // scroll to #js-nav-1
@@ -104,6 +119,7 @@ $(document).ready(function() {
     });
     $( ".js-range-2 span" ).text($( ".js-range-2 div" ).slider( "value" ) );
 
+    // show/hide your downloads in header
     $(".header__download .counter").click(function(){
         if ($(this).hasClass("js-active")) {
             $(this).parent().removeClass("active");
@@ -116,6 +132,7 @@ $(document).ready(function() {
             $(this).next().slideDown("fast");
         }
     });
+
 
     $(".btn-drop-list").click(function(){
         if ($(this).hasClass("btn-drop-list_active")) {
@@ -148,7 +165,7 @@ $(document).ready(function() {
         var prev_arr = $(this).next();
         var next_arr = $(this).next().next();
         $(this).cycle({ 
-            fx:      'scrollLeft',
+            fx:      'scrollHorz',
             next:    next_arr, 
             prev:    prev_arr,
             timeout:  0,
