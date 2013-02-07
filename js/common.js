@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-    // progress
-    // $(".meter > span").each(function() {
-    //     $(this)
-    //         .data("origWidth", $(this).width())
-    //         .width(0)
-    //         .animate({
-    //             width: $(this).data("origWidth")
-    //         }, 1200);
-    
     // masonry
     $('.js-masonry').masonry({
         itemSelector : '.film',
@@ -21,13 +12,56 @@ $(document).ready(function() {
         }
     });
 
+
+    $(".js-btn-1").addClass("active");
+    $('#js-nav-1').addClass('nav-wrap_act');
+    $('.section').addClass('section_act');
+
+    $(".header__nav button").click(function(){
+        $(".header__nav button").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(window).scroll(function() {
+        // activate #js-nav-1
+        if (($('body').scrollTop() <= position_nav_2)) {
+            $('#js-nav-1').addClass('nav-wrap_act');
+        }
+        else {
+            $('#js-nav-1').removeClass('nav-wrap_act');
+        }
+
+        // activate #js-nav-2
+        if ($('body').scrollTop() >= position_nav_2) {
+            $('#js-nav-2').addClass('nav-wrap_act');
+        }
+        else {
+            $('#js-nav-2').removeClass('nav-wrap_act');
+        }
+    });
+
+    // get nav position
+    var position_nav_1 =  $("#js-nav-1").position().top;
+    var position_nav_2 =  $("#js-nav-2").position().top;
+    //scroll to
+    $(".js-btn-2").click(function(){
+        $('html, body').animate({
+            scrollTop: position_nav_2 + 46
+        }, 700);
+    });
+    $(".js-btn-1").click(function(){
+        $('html, body').animate({
+         scrollTop: 0
+        }, 700);
+    });
+
     // filter imdb
     $( ".js-range-1 div" ).slider({
       range: "min",
       value: 8.5,
       min: 1,
       max: 10,
-      step: 0.1,
+      step: 0.5,
       animate: "slow",
       slide: function( event, ui ) {
         $( ".js-range-1 span" ).text(ui.value );
@@ -41,7 +75,7 @@ $(document).ready(function() {
       value: 8.5,
       min: 1,
       max: 10,
-      step: 0.1,
+      step: 0.5,
       animate: "slow",
       slide: function( event, ui ) {
         $( ".js-range-2 span" ).text(ui.value );
@@ -69,7 +103,9 @@ $(document).ready(function() {
             $(".series-scroll").removeClass("active");
         }
         else {
+            $(".btn-drop-list").removeClass("btn-drop-list_active");
             $(this).addClass("btn-drop-list_active");
+            $(".film-drop-list").slideUp();
             $(this).next().slideDown("fast");
             $(".series-scroll").addClass("active");
         }
@@ -116,7 +152,7 @@ $(document).ready(function() {
 
     // watch status buttons
     $(".watch-status button").click(function(){
-        $(".watch-status button").removeClass("active");
+        $(this).parent().children().removeClass("active");
         $(this).addClass("active");
     });
 

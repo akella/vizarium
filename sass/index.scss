@@ -57,6 +57,13 @@
     padding: 8px 0 10px; 
     background: #ececec;
 }
+.nav-wrap_act {
+    position: fixed;
+    top: 46px;
+    z-index: 10000;
+    left: 161px;
+    right: 16px;
+}
 .nav {
     padding-top: 5px;
     float: left;
@@ -126,7 +133,6 @@
 }
 .film {
     float: left;
-    z-index: 2;
     margin: 0 18px 18px 0;
     padding: 11px 2px 16px;
     width: 214px;
@@ -336,6 +342,7 @@
     li {
         margin-bottom: 15px;
         cursor: pointer; 
+        @include user-select(none); 
         &:last-child {
             color: #dc0b0b;
         }
