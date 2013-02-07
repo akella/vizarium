@@ -59,7 +59,6 @@ a:hover { text-decoration: none; }
 
 .section { background: #e1e1e1; }
 
-.section_act .main { padding-top: 50px; }
 .section_act .sidebar { padding-top: 20px; }
 
 .main { padding: 0 16px 0 11px; overflow: hidden; background: #ececec; }

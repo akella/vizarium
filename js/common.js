@@ -12,46 +12,54 @@ $(document).ready(function() {
         }
     });
 
-
+    // the initial state
     $(".js-btn-1").addClass("active");
     $('#js-nav-1').addClass('nav-wrap_act');
-    $('.section').addClass('section_act');
+    $('.js-films-1').addClass('film-wrap_act');
 
-    $(".header__nav button").click(function(){
-        $(".header__nav button").removeClass("active");
-        $(this).addClass("active");
-    });
 
+    // window scroll
     $(window).scroll(function() {
         // activate #js-nav-1
         if (($('body').scrollTop() <= position_nav_2)) {
             $('#js-nav-1').addClass('nav-wrap_act');
+            $('.js-films-1').addClass('film-wrap_act');
         }
         else {
             $('#js-nav-1').removeClass('nav-wrap_act');
+            $('.js-films-1').removeClass('film-wrap_act');
         }
 
         // activate #js-nav-2
-        if ($('body').scrollTop() >= position_nav_2) {
+        if ($('body').scrollTop() >= (position_nav_2 - 48)) {
             $('#js-nav-2').addClass('nav-wrap_act');
+            $(".js-btn-1").removeClass("active");
+            $(".js-btn-2").addClass("active");
+            $('.js-films-2').addClass('film-wrap_act');
         }
         else {
             $('#js-nav-2').removeClass('nav-wrap_act');
+            $(".js-btn-1").addClass("active");
+            $(".js-btn-2").removeClass("active");
+            $('.js-films-2').removeClass('film-wrap_act');
         }
     });
 
     // get nav position
     var position_nav_1 =  $("#js-nav-1").position().top;
     var position_nav_2 =  $("#js-nav-2").position().top;
-    //scroll to
-    $(".js-btn-2").click(function(){
-        $('html, body').animate({
-            scrollTop: position_nav_2 + 46
-        }, 700);
-    });
+
+    // scroll to #js-nav-1
     $(".js-btn-1").click(function(){
         $('html, body').animate({
          scrollTop: 0
+        }, 700);
+    });
+
+    // scroll to #js-nav-2
+    $(".js-btn-2").click(function(){
+        $('html, body').animate({
+            scrollTop: position_nav_2 - 48 // position + #js-nav-2 
         }, 700);
     });
 
