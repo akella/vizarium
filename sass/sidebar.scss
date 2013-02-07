@@ -7,6 +7,15 @@
     font-size: 12px;
     @include box-sizing(border-box);
 }
+.filter-wrap {
+    position: absolute;
+    left: 20px;
+    background: #e1e1e1;
+}
+.filter-wrap_act {
+    position: fixed;
+    top: 62px !important;
+}
 .sidebar__title {
     margin-bottom: 5px;
     color: #515151;

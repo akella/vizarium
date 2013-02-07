@@ -84,163 +84,167 @@
     </header>
     <section class="section">
         <aside class="sidebar">
-            <h2 class="sidebar__title">Показывать в обзоре</h2>
-            <div class="check">
-                <label for="check1">
-                    <input type="checkbox" id="check1" name="name">
-                    <i></i>
-                    Новые серии
-                </label>
-            </div>
-            <div class="check">
-                <label for="check2">
-                    <input type="checkbox" id="check2" name="name">
-                    <i></i>
-                    Новые серии
-                </label>
-            </div>
-            <div class="check">
-                <label for="check3">
-                    <input type="checkbox" id="check3" name="name">
-                    <i></i>
-                    Новые серии
-                </label>
-            </div>
-            <button class="btn-clr">Очистить фильтр</button>
-            <div class="check">
-                <label for="check4">
-                    <input type="checkbox" id="check4" name="name">
-                    <i></i>
-                    Фильмы
-                </label>
-            </div>
-            <div class="check">
-                <label for="check5">
-                    <input type="checkbox" id="check5" name="name">
-                    <i></i>
-                    Сериалы
-                </label>
-            </div>
-            <div class="check">
-                <label for="check6">
-                    <input type="checkbox" id="check6" name="name">
-                    <i></i>
-                    Передачи
-                </label>
-            </div>
-            <div class="filter filter_genre">
-                <div class="filter-genre">
-                    <h3 class="filter__title">Жанр</h3>
-                    <ul>
-                        <li class="active">
-                            <span>Боевик</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li>
-                            <span>Драма</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li>
-                            <span>Комедия</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li>
-                            <span>Мелодрама</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li class="inactive">
-                            <span>Мультфильм</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li>
-                            <span>Триллер</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li>
-                            <span>Ужасы</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                        <li>
-                            <span>Фантастика</span>
-                            <i class="icon icon_plus"></i>
-                            <i class="icon icon_minus"></i>
-                        </li>
-                    </ul>
+            <div class="filter-wrap js-filter-1">
+                <h2 class="sidebar__title">Показывать в обзоре</h2>
+                <div class="check">
+                    <label for="check1">
+                        <input type="checkbox" id="check1" name="name">
+                        <i></i>
+                        Новые серии
+                    </label>
                 </div>
-                <span class="more-genres">Больше жанров</span>
-            </div>
-            <div class="filter">
-                <h3 class="filter__title">Средняя оценка</h3>
-                <div class="slider-range js-range-1">
-                    <strong>IMDB</strong>
-                    <div></div>
-                    <span></span>
+                <div class="check">
+                    <label for="check2">
+                        <input type="checkbox" id="check2" name="name">
+                        <i></i>
+                        Новые серии
+                    </label>
                 </div>
-                <div class="slider-range js-range-2">
-                    <strong>Кинопоиск</strong>
-                    <div></div>
-                    <span></span>
+                <div class="check">
+                    <label for="check3">
+                        <input type="checkbox" id="check3" name="name">
+                        <i></i>
+                        Новые серии
+                    </label>
                 </div>
             </div>
-            <div class="filter">
-                <h3 class="filter__title">Год выхода</h3>
-                <div class="filter__diapazon">
-                    <span class="filter__sub-title">Диапазон</span>
-                    <div class="select-diapazon select">
-                        <span class="select__wrap"><span>После 2005</span></span>
+            <div class="filter-wrap  js-filter-2">
+                <button class="btn-clr">Очистить фильтр</button>
+                <div class="check">
+                    <label for="check4">
+                        <input type="checkbox" id="check4" name="name">
+                        <i></i>
+                        Фильмы
+                    </label>
+                </div>
+                <div class="check">
+                    <label for="check5">
+                        <input type="checkbox" id="check5" name="name">
+                        <i></i>
+                        Сериалы
+                    </label>
+                </div>
+                <div class="check">
+                    <label for="check6">
+                        <input type="checkbox" id="check6" name="name">
+                        <i></i>
+                        Передачи
+                    </label>
+                </div>
+                <div class="filter filter_genre">
+                    <div class="filter-genre">
+                        <h3 class="filter__title">Жанр</h3>
                         <ul>
-                            <li>После 2006</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
+                            <li class="active">
+                                <span>Боевик</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li>
+                                <span>Драма</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li>
+                                <span>Комедия</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li>
+                                <span>Мелодрама</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li class="inactive">
+                                <span>Мультфильм</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li>
+                                <span>Триллер</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li>
+                                <span>Ужасы</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
+                            <li>
+                                <span>Фантастика</span>
+                                <i class="icon icon_plus"></i>
+                                <i class="icon icon_minus"></i>
+                            </li>
                         </ul>
                     </div>
+                    <span class="more-genres">Больше жанров</span>
                 </div>
-                <div class="filter__period">
-                    <span class="filter__sub-title">Указать период</span>
-                    <input type="text">
-                    <span class="divider">—</span>
-                    <input type="text">
+                <div class="filter">
+                    <h3 class="filter__title">Средняя оценка</h3>
+                    <div class="slider-range js-range-1">
+                        <strong>IMDB</strong>
+                        <div></div>
+                        <span></span>
+                    </div>
+                    <div class="slider-range js-range-2">
+                        <strong>Кинопоиск</strong>
+                        <div></div>
+                        <span></span>
+                    </div>
                 </div>
+                <div class="filter">
+                    <h3 class="filter__title">Год выхода</h3>
+                    <div class="filter__diapazon">
+                        <span class="filter__sub-title">Диапазон</span>
+                        <div class="select-diapazon select">
+                            <span class="select__wrap"><span>После 2005</span></span>
+                            <ul>
+                                <li>После 2006</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter__period">
+                        <span class="filter__sub-title">Указать период</span>
+                        <input type="text">
+                        <span class="divider">—</span>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="select-opt select">
+                     <span class="select__wrap"><span>Страна</span></span>
+                     <ul>
+                         <li>Украина</li>
+                         <li>very long name of the country</li>
+                         <li>...</li>
+                         <li>...</li>
+                         <li>...</li>
+                     </ul>
+                 </div>
+                 <div class="select-opt select">
+                     <span class="select__wrap"><span>Качество видео</span></span>
+                     <ul>
+                         <li>1080p</li>
+                         <li>...</li>
+                         <li>...</li>
+                         <li>...</li>
+                         <li>...</li>
+                     </ul>
+                 </div>
+                 <div class="select-opt select">
+                     <span class="select__wrap"><span>Язык</span></span>
+                     <ul>
+                         <li>English</li>
+                         <li>...</li>
+                         <li>...</li>
+                         <li>...</li>
+                         <li>...</li>
+                     </ul>
+                 </div>
             </div>
-            <div class="select-opt select">
-                 <span class="select__wrap"><span>Страна</span></span>
-                 <ul>
-                     <li>Украина</li>
-                     <li>very long name of the country</li>
-                     <li>...</li>
-                     <li>...</li>
-                     <li>...</li>
-                 </ul>
-             </div>
-             <div class="select-opt select">
-                 <span class="select__wrap"><span>Качество видео</span></span>
-                 <ul>
-                     <li>1080p</li>
-                     <li>...</li>
-                     <li>...</li>
-                     <li>...</li>
-                     <li>...</li>
-                 </ul>
-             </div>
-             <div class="select-opt select">
-                 <span class="select__wrap"><span>Язык</span></span>
-                 <ul>
-                     <li>English</li>
-                     <li>...</li>
-                     <li>...</li>
-                     <li>...</li>
-                     <li>...</li>
-                 </ul>
-             </div>
         </aside>
         <section class="main">
             <div class="nav-wrap" id="js-nav-1">

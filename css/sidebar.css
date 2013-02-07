@@ -1,5 +1,9 @@
 .sidebar { float: left; padding: 17px 5px 0 20px; width: 150px; color: #546166; font-size: 12px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+.filter-wrap { position: absolute; left: 20px; background: #e1e1e1; }
+
+.filter-wrap_act { position: fixed; top: 62px !important; }
+
 .sidebar__title { margin-bottom: 5px; color: #515151; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 13px; }
 
 .check { position: relative; margin-bottom: 8px; padding-left: 17px; color: #515151; }

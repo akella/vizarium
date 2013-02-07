@@ -16,6 +16,7 @@ $(document).ready(function() {
     $(".js-btn-1").addClass("active");
     $('#js-nav-1').addClass('nav-wrap_act');
     $('.js-films-1').addClass('film-wrap_act');
+    $(".js-filter-1").addClass('filter-wrap_act');
 
 
     // window scroll
@@ -24,10 +25,12 @@ $(document).ready(function() {
         if (($('body').scrollTop() <= position_nav_2)) {
             $('#js-nav-1').addClass('nav-wrap_act');
             $('.js-films-1').addClass('film-wrap_act');
+            $(".js-filter-1").addClass('filter-wrap_act');
         }
         else {
             $('#js-nav-1').removeClass('nav-wrap_act');
             $('.js-films-1').removeClass('film-wrap_act');
+            $(".js-filter-1").removeClass('filter-wrap_act');
         }
 
         // activate #js-nav-2
@@ -36,12 +39,12 @@ $(document).ready(function() {
             $(".js-btn-1").removeClass("active");
             $(".js-btn-2").addClass("active");
             $('.js-films-2').addClass('film-wrap_act');
+            $(".js-filter-2").addClass('filter-wrap_act');
         }
         else {
             $('#js-nav-2').removeClass('nav-wrap_act');
-            //$(".js-btn-1").addClass("active");
-            //$(".js-btn-2").removeClass("active");
             $('.js-films-2').removeClass('film-wrap_act');
+            $(".js-filter-2").removeClass('filter-wrap_act');
         }
         if ($('body').scrollTop() < 100) {
             $(".js-btn-1").addClass("active");
@@ -50,8 +53,13 @@ $(document).ready(function() {
     });
 
     // get nav position
-    var position_nav_1 =  $("#js-nav-1").position().top;
-    var position_nav_2 =  $("#js-nav-2").position().top;
+    var position_nav_1 = $("#js-nav-1").position().top;
+    var position_nav_2 = $("#js-nav-2").position().top;
+    var pos_f_1 = $(".js-filter-1").position().top;
+    pos_f_1 = position_nav_1;
+    var pos_f_2 = $(".js-filter-2").position().top;
+    pos_f_2 = position_nav_2 + 14;
+    $(".js-filter-2").css("top", pos_f_2);
 
     // scroll to #js-nav-1
     $(".js-btn-1").click(function(){
