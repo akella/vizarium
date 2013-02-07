@@ -67,6 +67,7 @@ $(document).ready(function() {
         }, 700);
     });
 
+
     // filter imdb
     $( ".js-range-1 div" ).slider({
       range: "min",
@@ -128,18 +129,25 @@ $(document).ready(function() {
          $(".btn-drop-list").removeClass("btn-drop-list_active");
     });
 
+    // hide serials search
     $(".i-dont-watch").click(function(){
         $(this).parent().hide();
         $(this).parent().next().slideUp("fast");
     });
 
-    $('.series-scroll').cycle({ 
-        fx:      'scrollLeft',
-        next:   '.icon_next', 
-        prev:   '.icon_prev', 
-        timeout:  0,
-        speed: 700
+    // init cycle plugin
+    $('.series-scroll').each(function(){
+        var prev_arr = $(this).next();
+        var next_arr = $(this).next().next();
+        $(this).cycle({ 
+            fx:      'scrollLeft',
+            next:    next_arr, 
+            prev:    prev_arr,
+            timeout:  0,
+            speed: 700
+        });
     });
+
 
     // select film options
     $(".select__wrap").click(function(){
@@ -155,6 +163,7 @@ $(document).ready(function() {
         }
     });
 
+    // selects
     $(".select li").click(function(){
         var val = $(this).html();
         $(this).parent().prev().children("span").html(val);
