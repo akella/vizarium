@@ -53,7 +53,7 @@ body { min-width: 1085px; font-weight: normal; font-family: 'pt_sansregular', sa
 
 a:hover { text-decoration: none; }
 
-.l-layout { padding: 46px 0 10px; }
+.l-layout { padding: 46px 0 0; }
 
 .wrapper { overflow: hidden; }
 

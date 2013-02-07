@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // masonry
+// -------------------------  masonry ------------------------- //
     $('.js-masonry').masonry({
         itemSelector : '.film',
         isAnimated: true,
@@ -12,15 +12,17 @@ $(document).ready(function() {
         }
     });
 
-    // the initial state
+// -------------------- the initial state -----------------------//
     $(".js-btn-1").addClass("active");
     $('#js-nav-1').addClass('nav-wrap_act');
     $('.js-films-1').addClass('film-wrap_act');
     $(".js-filter-1").addClass('filter-wrap_act');
     $('<div class="shadow"></div>').insertAfter('.nav');
 
-    // window scroll
+// --------------------- window scroll -------------------------- //
     $(window).scroll(function() {
+
+        // --- main ---
         // activate #js-nav-1
         if (($('body').scrollTop() <= position_nav_2)) {
             $('#js-nav-1').addClass('nav-wrap_act');
@@ -31,17 +33,6 @@ $(document).ready(function() {
             $('#js-nav-1').removeClass('nav-wrap_act');
             $('.js-films-1').removeClass('film-wrap_act');
             $(".js-filter-1").removeClass('filter-wrap_act');
-        }
-
-        if (($('body').scrollTop() > 10)) {
-            $('#js-nav-1 .shadow').animate({
-                opacity: 1,
-              }, 500 );
-        }
-        else {
-            $('#js-nav-1 .shadow').animate({
-                opacity: 0,
-              }, 500 );
         }
 
         // activate #js-nav-2
@@ -59,9 +50,46 @@ $(document).ready(function() {
             $('#js-nav-2').removeClass('nav-wrap_act');
             $('.js-films-2').removeClass('film-wrap_act');
             $(".js-filter-2").removeClass('filter-wrap_act');
-            // $('#js-nav-2 .shadow').animate({
-            //     opacity: 0,
-            //   }, 500 );
+        }
+
+        //  ---- sticking effect of navs ---
+        if (($('body').scrollTop() >= (position_nav_2 - 95))) {
+            $("#js-nav-1").css({
+                "position":"absolute",
+                "top": position_nav_2 - 48,
+            });
+        }
+        else {
+            $("#js-nav-1").css({
+                "position":"fixed",
+                "top": 46,
+            });
+        }
+
+        //  ---- sticking effect of filters ---
+        if (($('body').scrollTop() >= (position_nav_2 - 150))) {
+            $(".js-filter-1").css({
+                "position":"absolute",
+                "top": pos_f_2-99,
+            });
+        }
+        else {
+            $(".js-filter-1").css({
+                "position":"fixed",
+                "top": 60,
+            });
+        }
+
+        // --- animate shadow ---
+        if (($('body').scrollTop() > 10)) {
+            $('#js-nav-1 .shadow').animate({
+                opacity: 1,
+              }, 500 );
+        }
+        else {
+            $('#js-nav-1 .shadow').animate({
+                opacity: 0,
+              }, 500 );
         }
 
         if ($('body').scrollTop() < 100) {
@@ -70,12 +98,14 @@ $(document).ready(function() {
         }
     });
 
-    // get nav position
+// --------------------- get nav position -------------------------- //
     var position_nav_1 = $("#js-nav-1").position().top;
     var position_nav_2 = $("#js-nav-2").position().top;
     var pos_f_2 = position_nav_2 + 14;
     $(".js-filter-2").css("top", pos_f_2);
+    $("#js-nav-2").css("z-index","10100");
 
+// --------------------- sctoll Top ------------------------------ //
     // scroll to #js-nav-1
     $(".js-btn-1").click(function(){
         $('html, body').animate({
@@ -90,7 +120,7 @@ $(document).ready(function() {
         }, 700);
     });
 
-
+// --------------------- Filters ------------------------------ //
     // filter imdb
     $( ".js-range-1 div" ).slider({
       range: "min",
@@ -119,7 +149,7 @@ $(document).ready(function() {
     });
     $( ".js-range-2 span" ).text($( ".js-range-2 div" ).slider( "value" ) );
 
-    // show/hide your downloads in header
+ // ------------------- show/hide your downloads in header -------- //
     $(".header__download .counter").click(function(){
         if ($(this).hasClass("js-active")) {
             $(this).parent().removeClass("active");
@@ -133,7 +163,7 @@ $(document).ready(function() {
         }
     });
 
-
+// --------------------- Drop down list ------------------------------ //
     $(".btn-drop-list").click(function(){
         if ($(this).hasClass("btn-drop-list_active")) {
             $(this).removeClass("btn-drop-list_active");
@@ -154,13 +184,13 @@ $(document).ready(function() {
          $(".btn-drop-list").removeClass("btn-drop-list_active");
     });
 
-    // hide serials search
+// ---------------- hide serials search -------------------------- //
     $(".i-dont-watch").click(function(){
         $(this).parent().hide();
         $(this).parent().next().slideUp("fast");
     });
 
-    // init cycle plugin
+// ----------------  init cycle plugin -------------------------- //
     $('.series-scroll').each(function(){
         var prev_arr = $(this).next();
         var next_arr = $(this).next().next();
@@ -174,7 +204,7 @@ $(document).ready(function() {
     });
 
 
-    // select film options
+//  ---------------- select film options ----------------------- //
     $(".select__wrap").click(function(){
         if ($(this).hasClass("js-active")) {
             $(this).removeClass("js-active");
@@ -188,7 +218,7 @@ $(document).ready(function() {
         }
     });
 
-    // selects
+//  ------------------------ selects ------------------------- //
     $(".select li").click(function(){
         var val = $(this).html();
         $(this).parent().prev().children("span").html(val);
@@ -196,7 +226,7 @@ $(document).ready(function() {
         $(this).parent().prev().removeClass("js-active");
     });
 
-    // watch status buttons
+// -------------------- watch status buttons ----------------- //
     $(".watch-status button").click(function(){
         $(this).parent().children().removeClass("active");
         $(this).addClass("active");
