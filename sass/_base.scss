@@ -93,6 +93,16 @@ $break-large: 1180px;
     }
 }
 
+@mixin clr {
+  &:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+}
+
 // placeholder color
 @mixin placeholder-color($color) {
   &.placeholder {

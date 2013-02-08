@@ -1,6 +1,6 @@
 .search input[type="submit"] { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.wrap:after, .section:after, .header:after, .header__main:after, .nav-wrap:after, .nav:after, .film-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.header:after, .header__main:after, .nav-wrap:after, .nav:after, .film-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 @font-face { font-family: 'pt_sansregular'; src: url("../fonts/pts55f-webfont.woff") format("woff"); }
 
@@ -55,13 +55,13 @@ a:hover { text-decoration: none; }
 
 .l-layout { padding: 46px 0 0; }
 
-.wrapper { overflow: hidden; }
-
 .section { background: #e1e1e1; }
 
 .section_act .sidebar { padding-top: 20px; }
 
-.main { padding: 0 16px 0 11px; overflow: hidden; background: #ececec; }
+.main { padding: 0 16px 40px 11px; overflow: hidden; background: #ececec; }
+
+.clr { clear: both; }
 
 /* ----------------------------------- //END Main styles -------------------------------------- */
 /* ------------------------------------------ Header ----------------------------------------- */
@@ -204,7 +204,7 @@ a:hover { text-decoration: none; }
 /* --------------------------------------- END Blocks ---------------------------------------- */
 .search input[type="submit"] { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.wrap:after, .section:after, .header:after, .header__main:after, .nav-wrap:after, .nav:after, .film-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.header:after, .header__main:after, .nav-wrap:after, .nav:after, .film-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .meter { width: 224px; height: 11px; /* Can be anything */ position: relative; background: #fff; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
 
@@ -353,7 +353,7 @@ a:hover { text-decoration: none; }
 
 .search input[type="submit"] { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.wrap:after, .section:after, .header:after, .header__main:after, .nav-wrap:after, .nav:after, .film-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.header:after, .header__main:after, .nav-wrap:after, .nav:after, .film-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .sidebar { float: left; padding: 17px 5px 0 20px; width: 150px; color: #546166; font-size: 12px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 

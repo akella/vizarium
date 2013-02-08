@@ -99,15 +99,10 @@ a {
 .l-layout {
     padding: 46px 0 0;
 }
-.wrapper {  
-    overflow: hidden;
-} 
-.wrap {
-    @extend %clr;
-}
 .section {
-    @extend %clr;
+    //@extend %clr;
     background: #e1e1e1;
+    //overflow: hidden;
 }
 .section_act {
     // .main {
@@ -118,9 +113,13 @@ a {
     }
 }
 .main {
-    padding: 0 16px 0 11px;
+    //@include clr;
+    padding: 0 16px 40px 11px;
     overflow: hidden;
     background: #ececec;
+}
+.clr {
+    clear: both;
 }
 
 /* ----------------------------------- //END Main styles -------------------------------------- */
@@ -128,7 +127,7 @@ a {
 /* ------------------------------------------ Header ----------------------------------------- */
 .header {
     position: fixed;
-    top: 0;
+    top: 0; 
     left: 0;
     right: 0;
     z-index: 30000;

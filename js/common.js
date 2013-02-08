@@ -11,7 +11,6 @@ $(document).ready(function() {
             queue: false
         }
     });
-
 // -------------------- the initial state -----------------------//
     $(".js-btn-1").addClass("active");
     $('#js-nav-1').addClass('nav-wrap_act');
