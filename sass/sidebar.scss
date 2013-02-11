@@ -7,6 +7,26 @@
     font-size: 12px;
     @include box-sizing(border-box);
 }
+
+.filter-scroll {
+    overflow-y: scroll;
+    padding-right: 5px;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        @include border-radius(10px);
+    }
+    &::-webkit-scrollbar-thumb {
+        @include border-radius(10px);
+        background: #b9b9b9;
+    }
+    &::-webkit-scrollbar-track-piece  {
+        background: #e1e1e1;
+
+    }
+}
+
 .filter-wrap {
     position: absolute;
     left: 20px;
@@ -16,7 +36,7 @@
     position: fixed;
    // top: 60px;
 }
-.js-filter-2.filter-wrap_act {
+.filter-wrap_2.filter-wrap_act {
     top: 60px !important;
 }
 .sidebar__title {
@@ -30,19 +50,12 @@
     margin-bottom: 8px;
     padding-left: 17px;
     color: #515151;
-    i, input {
+    input {
         position: absolute;
         left: 0;
         top: 0;
         width: 13px;
         height: 13px;
-    }
-    input {
-        opacity: 0;
-        z-index: 2;
-    }
-    i {
-        @include sized-sprite($icons, check);
     }
 }   
 .btn-clr {
@@ -66,8 +79,21 @@
     border: 1px solid #c0c0c0;
     @include border-radius(3px);
 }
-.filter_genre {
-    padding: 9px 0 0;
+.filter__title {
+    @include pts_b;
+    font-size: 12px;
+}
+.filter-list {
+    margin: 10px 0;
+    background: #fff;
+    @include border-radius(3px);
+    .active {
+        background: #fff;
+        border: 1px solid transparent;
+        &:after {
+            display: none;
+        }
+    }
     .more-genres {
         display: block;
         padding-left: 6px;
@@ -76,13 +102,41 @@
         cursor: pointer;
         background: #f2f2f2;
         @include border-radius(0 0 3px 3px);
+        &:hover {
+            background: #c2e6c2;
+        }
     }
 }
-.filter__title {
-    @include pts_b;
+.filter-list__title {
+    position: relative;
+    padding-left: 6px;
+    height: 32px;
+    line-height: 32px;
     font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #c0c0c0;
+    @include pts_b;
+    @include border-radius(3px);
+    @include box-sizing(border-box);
+    @include user-select(none);
+    @include background-image(linear-gradient(#fff, #e6e6e6));
+    &:after {
+        content: "";
+        position: absolute;
+        right: 6px;
+        top: 13px;
+        @include sized-sprite($icons, arr5);
+    }
+    span {
+        display: inline-block;
+        max-width: 93px;
+        overflow: hidden;
+        height: 30px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
-.filter-genre {
+.filter-list__wrap {
     padding: 0 3px 0 6px;
     ul {
         li {
@@ -93,12 +147,17 @@
             @include user-select(none);
             &:hover {
                 color: #00b400;
-                .icon_plus {@include sized-sprite($icons, plus-act);}
+                .icon_minus {@include sized-sprite($icons, minus-act);}
             }
             span {
                 display: inline-block;
                 width: 85px;
                 margin-right: -3px;
+            }
+            .icon_plus {
+                &:hover {
+                    @include sized-sprite($icons, plus-act);
+                }
             }
         }
         .inactive {

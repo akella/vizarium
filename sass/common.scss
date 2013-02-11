@@ -64,25 +64,24 @@ table {
 }
 *{-webkit-text-size-adjust: none; }
 /* ----------------------------------------- Main styles --------------------------------------- */
-::-webkit-scrollbar {
-    width: 14px;
-}
-/* Track */ 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: #b9b9b9;
-}
-::-webkit-scrollbar-track-piece  {
-    background: #e1e1e1;
-    -webkit-box-shadow: inset 1px 0 13px rgba(0,0,0,0.2); 
+html {
+    &::-webkit-scrollbar {
+        width: 14px;
+    }
+    /* Track */ 
+    &::-webkit-scrollbar-track {
+        @include border-radius(10px);
+        @include box-shadow(inset 0 0 6px rgba(0,0,0,0.3));
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        @include border-radius(10px);
+        background: #b9b9b9;
+    }
+    &::-webkit-scrollbar-track-piece  {
+        background: #e1e1e1;
+        @include box-shadow(inset 0 0 6px rgba(0,0,0,0.3));
+    }
 }
 body {
     min-width: 1085px;
@@ -232,6 +231,16 @@ a {
     height: 45px;
     line-height: 39px;
     text-align: center;
+    &:hover {
+        background: #0ba5dc;
+        &:after,
+        &:before {
+             display: none;
+        }
+        .counter {
+            border-color: #fff;
+        }
+    }
     &:after {
         content: "";
         position: absolute;
@@ -422,11 +431,40 @@ a {
     display: inline-block;
     @include user-select(none);
 }
-.icon_pause {@include sized-sprite($icons, pause);}
+.icon_pause {
+    @include sized-sprite($icons, pause);
+    &:hover {
+        @include sized-sprite($icons, pause-h);
+    }
+     &:active {
+        @include sized-sprite($icons, pause-c);
+    }
+}
+.icon_pause-act {
+    @include sized-sprite($icons, pause-act);
+}
 .icon_pause-2 {@include sized-sprite($icons, pause2);}
-.icon_play {@include sized-sprite($icons, play);}
-.icon_del {@include sized-sprite($icons, del);}
-.icon_del-2 {@include sized-sprite($icons, del2);}
+.icon_play {
+    @include sized-sprite($icons, play);
+    &:hover {
+        @include sized-sprite($icons, play-h);
+    }
+     &:active {
+        @include sized-sprite($icons, play-c);
+    }
+}
+.icon_play-act {
+    @include sized-sprite($icons, play-act);
+}
+.icon_del {
+    @include sized-sprite($icons, del);
+    &:hover {
+        @include sized-sprite($icons, del-h);
+    }
+     &:active {
+        @include sized-sprite($icons, del-c);
+    }
+}
 .icon_trash {@include sized-sprite($icons, trash);}
 .icon_file {@include sized-sprite($icons, file);}
 .icon_eye-s {@include sized-sprite($icons, eye-s);}
@@ -437,16 +475,48 @@ a {
 .icon_star-s {@include sized-sprite($icons, star-s);}
 
 .icon_mark {@include sized-sprite($icons, mark);}
-.icon_mark-act {@include sized-sprite($icons, mark-act);}
-.icon_star {@include sized-sprite($icons, star);}
-.icon_star-act {@include sized-sprite($icons, star-act);}
-.icon_eye {@include sized-sprite($icons, eye);}
+.icon_mark-act {
+    @include sized-sprite($icons, mark-act);
+}
+.icon_favor {
+    @include sized-sprite($icons, favor);
+    &:hover {
+        @include sized-sprite($icons, favor-h);
+    }
+    &:active {
+        @include sized-sprite($icons, favor-c);
+    }
+}
+.icon_favor-act {@include sized-sprite($icons, favor-act);}
+.icon_eye {
+    @include sized-sprite($icons, eye);
+    &:hover {
+        @include sized-sprite($icons, eye-h);
+    }
+    &:active {
+        @include sized-sprite($icons, eye-c);
+    }
+}
 .icon_eye-act {@include sized-sprite($icons, eye-act);}
-.icon_delite {@include sized-sprite($icons,delite);}
+.icon_delite {
+    @include sized-sprite($icons,delite);
+    &:hover {
+        @include sized-sprite($icons, delite-h);
+    }
+    &:active {
+        @include sized-sprite($icons, delite-c);
+    }
+}
 .icon_delite-act {@include sized-sprite($icons,delite-act);}
 
 .icon_plus {@include sized-sprite($icons, plus);}
 .icon_minus {@include sized-sprite($icons, minus);}
+
+.icon_ivi {@include sized-sprite($icons, ivi);}
+.icon_ex {@include sized-sprite($icons, ex);}
+.icon_rutracker {@include sized-sprite($icons, rutracker);}
+.icon_wtf {@include sized-sprite($icons, wtf);}
+.icon_rus {@include sized-sprite($icons, rus);}
 
 
 // buttons
@@ -481,7 +551,7 @@ a {
         left: 0;
         padding: 7px 10px 5px;
         width: 100%;
-        background: #fff;
+        background: #f5f5f5;
         @include border-radius(3px);
         border: 1px solid #dcdcdc;
         @include box-sizing(border-box);
@@ -490,8 +560,9 @@ a {
         cursor: pointer;
         line-height: 1;
         margin-bottom: 10px;
-        &:hover {
-            color: #0ba5dc;
+        border-top: 1px solid #fff;
+        &:first-child {
+            border-top: #000;
         }
     }
 }
