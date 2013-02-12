@@ -180,8 +180,11 @@
         margin-left: 2px;
     }
 }
-.film_act {
+.film_width {
     width: 428px;
+    .series-scroll__item {
+        width: 100%;
+    }
 }
 .film__img {
     margin: 0 9px;

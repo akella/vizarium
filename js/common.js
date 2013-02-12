@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-$(".btn-wrap").each(function(){
-    var child_counter = $(this).children().length;
+$(".series-scroll__item").each(function(){
+    var child_counter = $(this).children(".btn").length;
     //alert(child_counter);
     if (child_counter > 1) {
-        $(this).parent().parent().parent().parent().addClass("film_act");
+        $(this).parent().parent().parent().addClass("film_width");
     }
 });
 // -------------------------  masonry ------------------------- //
@@ -204,7 +204,7 @@ $(".btn-wrap").each(function(){
         var prev_arr = $(this).next();
         var next_arr = $(this).next().next();
         $(this).cycle({ 
-            //fx:      'scrollHorz',
+            fx:      'scrollHorz',
             next:    next_arr, 
             prev:    prev_arr,
             timeout:  0,
