@@ -1,10 +1,18 @@
 $(document).ready(function() {
 
+$(".btn-wrap").each(function(){
+    var child_counter = $(this).children().length;
+    //alert(child_counter);
+    if (child_counter > 1) {
+        $(this).parent().parent().parent().parent().addClass("film_act");
+    }
+});
 // -------------------------  masonry ------------------------- //
     $('.js-masonry').masonry({
         itemSelector : '.film',
         isAnimated: true,
         isResizable: true,
+        //columnWidth: 232,
         animationOptions: {
             duration: 300,
             easing: 'linear',
@@ -196,7 +204,7 @@ $(document).ready(function() {
         var prev_arr = $(this).next();
         var next_arr = $(this).next().next();
         $(this).cycle({ 
-            fx:      'scrollHorz',
+            //fx:      'scrollHorz',
             next:    next_arr, 
             prev:    prev_arr,
             timeout:  0,
@@ -252,6 +260,7 @@ $(document).ready(function() {
 
 
 
+
 //  ------------------------ selects ------------------------- //
     // $(".select li").click(function(){
     //     var val = $(this).html();
@@ -265,5 +274,7 @@ $(document).ready(function() {
         $(this).parent().children().removeClass("active");
         $(this).addClass("active");
     });
+    
 
 });
+

@@ -180,6 +180,9 @@
         margin-left: 2px;
     }
 }
+.film_act {
+    width: 428px;
+}
 .film__img {
     margin: 0 9px;
     display: block;
@@ -484,6 +487,9 @@
         display: block;
         text-align: center;
         margin-bottom: 8px;
+    }
+    .btn-wrap {
+        display: inline-block;
     }
 }
 .series-scroll.active {
