@@ -218,9 +218,26 @@ $(document).ready(function() {
             $(this).next().slideDown("fast");
         }
     });
+
+//  ---------------- sidebar-height ----------------------- //
+    var filter_height = $(".js-filter-2").height();
+    var page_height = $("html").height();
+    // alert(filter_height);
+    // alert(page_height);
+    if (filter_height >= page_height) {
+        //alert("BIG");
+        $(".js-filter-2").addClass("filter-scroll");
+        $(".js-filter-2").css("height", page_height-100);
+    }
+
 //  ---------------- Extend list ----------------------- //
     $(".js-extend").hide();
     $(".filter-list__title").click(function(){
+        if (filter_height >= page_height) {
+            //alert("BIG");
+            $(".js-filter-2").addClass("filter-scroll");
+            $(".js-filter-2").css("height", page_height-100);
+        }
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
             $(this).next().slideUp("fast");
@@ -233,16 +250,7 @@ $(document).ready(function() {
         }
     });
 
-//  ---------------- sidebar-height ----------------------- //
-    var filter_height = $(".js-filter-2").height();
-    var page_height = $("html").height();
-    // alert(filter_height);
-    // alert(page_height);
-    if (filter_height >= page_height) {
-        //alert("BIG");
-        $(".js-filter-2").addClass("filter-scroll");
-        $(".js-filter-2").css("height", page_height-100);
-    }
+
 
 //  ------------------------ selects ------------------------- //
     // $(".select li").click(function(){
