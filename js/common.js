@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-$(".series-scroll__item").each(function(){
-    var child_counter = $(this).children(".btn").length;
-    //alert(child_counter);
-    if (child_counter > 1) {
-        $(this).parent().parent().parent().addClass("film_width");
-    }
-});
+// $(".series-scroll__item").each(function(){
+//     var child_counter = $(this).children(".btn").length;
+//     //alert(child_counter);
+//     if (child_counter > 1) {
+//         $(this).parent().parent().parent().addClass("film_width");
+//     }
+// });
 // -------------------------  masonry ------------------------- //
     $('.js-masonry').masonry({
         itemSelector : '.film',

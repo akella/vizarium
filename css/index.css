@@ -39,9 +39,6 @@
 .film .progress__percent { display: block; margin: 8px 0 -5px; color: #396dbc; text-align: center; }
 .film .icon_del { margin-left: 2px; }
 
-.film_width { width: 428px; }
-.film_width .series-scroll__item { width: 100%; }
-
 .film__img { margin: 0 9px; display: block; text-align: center; }
 .film__img img { width: 190px; height: 269px; }
 

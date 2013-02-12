@@ -145,18 +145,22 @@
             line-height: 18px;
             cursor: pointer;
             @include user-select(none);
-            &:hover {
-                color: #00b400;
-                .icon_minus {@include sized-sprite($icons, minus-act);}
-            }
             span {
                 display: inline-block;
                 width: 85px;
                 margin-right: -3px;
+                &:hover {
+                    color: #00b400;
+                }
             }
             .icon_plus {
                 &:hover {
                     @include sized-sprite($icons, plus-act);
+                }
+            }
+            .icon_minus {
+                &:hover {
+                    @include sized-sprite($icons, minus-act);
                 }
             }
         }
